@@ -1,4 +1,4 @@
-# Project Structure
+# 🗃️ Project Structure
 
 ```
 project/
@@ -30,14 +30,14 @@ project/
 
 <hr>
 
-# HTML Guidelines
+# 👩‍🏫 HTML Guidelines
 
 - Semantic HTML: Use appropriate tags (e.g., `<header>`, `<main>`, `<section>`, `<article>`) for better structure and accessibility.
 - BEM Naming for Classes: Use Block-Element-Modifier (BEM) methodology for naming CSS classes.
 
 <hr>
 
-# CSS Guidelines
+# 🎨 CSS Guidelines
 
 - Reset Styles: Use a CSS reset or normalize stylesheet to ensure consistent styling across browsers.
 - Modular CSS: Split styles into multiple files (e.g., base.css, components.css, utilities.css) and avoid inline styles.
@@ -45,7 +45,7 @@ project/
 
 <hr>
 
-# JavaScript Guidelines
+# 🟨 JavaScript Guidelines
 
 - DOM Manipulation: Encapsulate DOM manipulations inside reusable functions.
 
