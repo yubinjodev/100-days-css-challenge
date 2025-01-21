@@ -1,4 +1,4 @@
-let open = false;
+let open = false
 
 const handleClickOpen = () => {
   $(".hamburger-menu__bar")
@@ -12,9 +12,9 @@ const handleClickOpen = () => {
         left: "50%",
       },
       5000, // Duration in milliseconds (5 seconds)
-      () => {}
-    );
-};
+      () => {},
+    )
+}
 
 const handleClickClose = () => {
   $(".hamburger-menu__bar")
@@ -27,16 +27,16 @@ const handleClickClose = () => {
         top: "unset",
         left: "unset",
       },
-      5000 // Duration in milliseconds (5 seconds)
-    );
-};
+      5000, // Duration in milliseconds (5 seconds)
+    )
+}
 
 $(".hamburger-menu").click(() => {
   if (open) {
-    open = false;
-    handleClickClose();
+    open = false
+    handleClickClose()
   } else {
-    open = true;
-    handleClickOpen();
+    open = true
+    handleClickOpen()
   }
-});
+})
