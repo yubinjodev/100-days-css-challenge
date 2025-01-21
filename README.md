@@ -6,13 +6,13 @@ project/
 │   ├── images/
 │   ├── fonts/
 │   └── icons/
-├── css/                   # Stylesheets
+├── styles/                # Stylesheets
 │   ├── base.css           # Reset/normalize and base styles
 │   ├── components.css     # Component-specific styles
 │   ├── layout.css         # Layout styles (grid, flex, etc.)
 │   ├── utilities.css      # Utility classes
 │   └── theme.css          # Theme variables (colors, typography, etc.)
-├── js/                    # JavaScript files
+├── javascript/            # JavaScript files
 │   ├── components/        # Component scripts
 │   │   ├── navbar.js
 │   │   ├── modal.js
