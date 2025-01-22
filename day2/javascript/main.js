@@ -1,20 +1,4 @@
-let open = false
-
-const handleClickOpen = () => {
-  $(".hamburger-menu__bar")
-    .css({
-      position: "absolute",
-      transform: "translate(-50%, -50%)",
-    })
-    .animate(
-      {
-        top: "50%",
-        left: "50%",
-      },
-      5000, // Duration in milliseconds (5 seconds)
-      () => {},
-    )
-}
+let isOpen = false
 
 const handleClickClose = () => {
   $(".hamburger-menu__bar")
@@ -27,16 +11,34 @@ const handleClickClose = () => {
         top: "unset",
         left: "unset",
       },
-      5000, // Duration in milliseconds (5 seconds)
+      5_000,
     )
+
+  isOpen = false
+}
+
+const handleClickOpen = () => {
+  $(".hamburger-menu__bar")
+    .css({
+      position: "absolute",
+      transform: "translate(-50%, -50%)",
+    })
+    .animate(
+      {
+        top: "50%",
+        left: "50%",
+      },
+      5_000,
+      () => {},
+    )
+
+  isOpen = true
 }
 
 $(".hamburger-menu").click(() => {
-  if (open) {
-    open = false
+  if (isOpen) {
     handleClickClose()
   } else {
-    open = true
     handleClickOpen()
   }
 })
