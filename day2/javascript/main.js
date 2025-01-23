@@ -1,15 +1,17 @@
 let isOpen = true
 
 const handleClickClose = () => {
-  $(".hamburger__bar--tertiary")
-    .animate(
-      {
-        width: "30%",
+  $(".hamburger__bar--tertiary").animate(
+    {
+      width: "30%",
+    },
+    500,
+    function () {
+      $(this).css({
         display: "none",
-      },
-      500,
-    )
-    .fadeOut()
+      })
+    },
+  )
 
   $(".hamburger__bar--secondary")
     .css({
@@ -49,13 +51,6 @@ const handleClickClose = () => {
 }
 
 const handleClickOpen = () => {
-  $(".hamburger__bar--tertiary").fadeIn().animate(
-    {
-      width: "100%",
-    },
-    500,
-  )
-
   $(".hamburger__bar--secondary").css({
     transform: "translate(-50%, 0%)",
   })
@@ -72,6 +67,11 @@ const handleClickOpen = () => {
       top: "50px",
     })
   }, 500)
+  setTimeout(() => {
+    $(".hamburger__bar--tertiary").fadeIn().animate({
+      width: "100%",
+    })
+  }, 100)
 
   isOpen = true
 }
