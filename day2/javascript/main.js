@@ -5,6 +5,7 @@ const handleClickClose = () => {
     .animate(
       {
         width: "30%",
+        display: "none",
       },
       500,
     )
