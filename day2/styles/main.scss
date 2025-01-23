@@ -28,31 +28,34 @@
 
 .hamburger {
   width: 100px;
+  height: 60px;
   cursor: pointer;
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 
   &__bar {
-    width: 100%;
+    width: 100px;
     height: 8px;
     background: white;
     border-radius: 3px;
     box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
-
-    &--primary {
-      background: red;
-      z-index: 3;
-    }
+    position: absolute;
+    left: 50%;
 
     &--secondary {
-      background: blue;
       z-index: 2;
+      top: 0%;
+      transform: translate(-50%, 0%);
     }
 
     &--tertiary {
-      background: white;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--primary {
+      z-index: 3;
+      top: 50px;
+      transform: translate(-50%, 0%);
     }
   }
 }

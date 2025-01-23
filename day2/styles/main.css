@@ -28,27 +28,30 @@
 
 .hamburger {
   width: 100px;
+  height: 60px;
   cursor: pointer;
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 .hamburger__bar {
-  width: 100%;
+  width: 100px;
   height: 8px;
   background: white;
   border-radius: 3px;
   box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
-}
-.hamburger__bar--primary {
-  background: red;
-  z-index: 3;
+  position: absolute;
+  left: 50%;
 }
 .hamburger__bar--secondary {
-  background: blue;
   z-index: 2;
+  top: 0%;
+  transform: translate(-50%, 0%);
 }
 .hamburger__bar--tertiary {
-  background: white;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.hamburger__bar--primary {
+  z-index: 3;
+  top: 50px;
+  transform: translate(-50%, 0%);
 }/*# sourceMappingURL=main.css.map */
