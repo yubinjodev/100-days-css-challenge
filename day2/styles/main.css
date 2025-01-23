@@ -40,6 +40,7 @@
   box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
   position: absolute;
   left: 50%;
+  transition: transform 500ms ease;
 }
 .hamburger__bar--secondary {
   z-index: 2;

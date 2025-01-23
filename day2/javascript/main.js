@@ -15,17 +15,35 @@ const handleClickClose = () => {
     .css({
       transform: "translate(-50%, -50%)",
     })
-    .animate({
-      top: "50%",
-    })
+    .animate(
+      {
+        top: "50%",
+      },
+      {
+        complete: function () {
+          $(this).css({
+            transform: "translate(-50%, -50%) rotate(45deg)",
+          })
+        },
+      },
+    )
 
   $(".hamburger__bar--primary")
     .css({
       transform: "translate(-50%, -50%)",
     })
-    .animate({
-      top: "50%",
-    })
+    .animate(
+      {
+        top: "50%",
+      },
+      {
+        complete: function () {
+          $(this).css({
+            transform: "translate(-50%, -50%) rotate(130deg)",
+          })
+        },
+      },
+    )
 
   isOpen = false
 }
@@ -38,21 +56,22 @@ const handleClickOpen = () => {
     500,
   )
 
-  $(".hamburger__bar--secondary")
-    .animate({
+  $(".hamburger__bar--secondary").css({
+    transform: "translate(-50%, 0%)",
+  })
+
+  $(".hamburger__bar--primary").css({
+    transform: "translate(-50%, 0%)",
+  })
+
+  setTimeout(() => {
+    $(".hamburger__bar--secondary").animate({
       top: "0px",
     })
-    .css({
-      transform: "translate(-50%, 0%)",
-    })
-
-  $(".hamburger__bar--primary")
-    .animate({
+    $(".hamburger__bar--primary").animate({
       top: "50px",
     })
-    .css({
-      transform: "translate(-50%, 0%)",
-    })
+  }, 500)
 
   isOpen = true
 }
